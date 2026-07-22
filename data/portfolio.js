@@ -1,3 +1,4 @@
+// All portfolio content is maintained here.
 export const profile = {
   name: 'Priyansu Kumar', initials: 'PK', email: 'priyansukumar38517@gmail.com', phone: '+91 62073 98499', location: 'Dhanbad, Jharkhand, India',
   roles: ['Data Analyst', 'SQL Analyst', 'Business Intelligence Learner', 'Data Storyteller'],
