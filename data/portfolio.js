@@ -3,7 +3,7 @@ export const profile = {
   name: 'Priyansu Kumar', initials: 'PK', email: 'priyansukumar38517@gmail.com', phone: '+91 62073 98499', location: 'Dhanbad, Jharkhand, India',
   roles: ['Data Analyst', 'AI Enthusiast', 'Business Intelligence Learner', 'Data Storyteller'],
   intro: 'Computer science graduate focused on turning raw data into clear insights that support better business decisions.',
-  availability: 'Open to entry-level data analyst and software engineering opportunities', resume: '/resume.pdf'
+  availability: 'Open to entry-level data analyst and software engineering opportunities', resume: 'resume.pdf'
 };
 export const stats = [{ value: '02', label: 'Major projects' }, { value: '12+', label: 'Core technologies' }, { value: '01', label: 'Industry internship' }, { value: '4', label: 'Years of learning' }];
 export const education = [
