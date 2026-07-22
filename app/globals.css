@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light dark; }
+html { scroll-behavior: smooth; }
+body { @apply bg-white font-sans text-slate-700 antialiased dark:bg-slate-950 dark:text-slate-200; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.font-display { font-family: Georgia, Cambria, "Times New Roman", serif; }
+::selection { @apply bg-blue-200 text-slate-950; }
+.eyebrow { @apply text-xs font-semibold uppercase tracking-[.18em] text-accent; }
+.nav-link { @apply text-xs font-medium text-slate-500 transition hover:text-ink dark:text-slate-400 dark:hover:text-white; }
+.hero-grid { background-image: linear-gradient(rgba(100,116,139,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(100,116,139,.055) 1px, transparent 1px); background-size: 44px 44px; }
+.orb { @apply pointer-events-none absolute rounded-full blur-3xl; animation: drift 10s ease-in-out infinite; }
+.orb-one { width: 28rem; height: 28rem; background: rgba(59,130,246,.14); top: 3rem; right: 7%; }
+.orb-two { width: 20rem; height: 20rem; background: rgba(168,85,247,.12); bottom: 0; left: 5%; animation-delay: -5s; }
+.text-gradient { background: linear-gradient(115deg,#2563eb,#7c3aed); background-clip: text; -webkit-background-clip:text; color: transparent; }
+.button-primary, .button-secondary { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-950; }
+.button-primary { @apply bg-ink text-white shadow-lg shadow-blue-500/10 hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-200; }
+.button-secondary { @apply border border-slate-200 bg-white/60 text-ink hover:-translate-y-0.5 hover:border-slate-300 dark:border-white/15 dark:bg-white/5 dark:text-white; }
+.workspace-card { @apply relative rounded-3xl border border-white/70 bg-white/75 p-6 shadow-glow backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/70; transform: perspective(1000px) rotateY(-4deg) rotateX(2deg); }
+.workspace-card i { @apply h-2.5 w-2.5 rounded-full bg-slate-300; }.workspace-card i:first-child { @apply bg-red-300; }.workspace-card i:nth-child(2) { @apply bg-amber-300; }.workspace-card i:last-child { @apply bg-emerald-300; }
+.float-chip { @apply absolute rounded-full border border-white/70 bg-white/90 px-3 py-2 text-xs font-semibold shadow-lg dark:border-white/10 dark:bg-slate-800/90; animation: float 5s ease-in-out infinite; }.chip-one { top:17%; right:-7%; }.chip-two { bottom:12%; left:-9%; animation-delay:-2s; }
+.stat-card { @apply rounded-2xl border border-slate-100 bg-slate-50 p-4 dark:border-white/10 dark:bg-white/5; }.stat-card strong { @apply block font-display text-3xl text-ink dark:text-white; }.stat-card span { @apply mt-1 block text-xs leading-5 text-slate-500; }
+.timeline { @apply relative ml-2 border-l border-slate-200 pl-7 dark:border-white/15; }.timeline-card { @apply relative mb-5 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/5; }.timeline-card:before { content:""; @apply absolute -left-[35px] top-8 h-3 w-3 rounded-full border-[3px] border-white bg-accent dark:border-slate-950; }.timeline-card h3, .skill-card h3, .certificate h3, .project-card h3 { @apply mt-2 text-lg font-semibold tracking-tight text-ink dark:text-white; }
+.skill-card { @apply rounded-2xl border border-slate-100 bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg dark:border-white/10 dark:bg-white/5; }.skill-card h3 { @apply mb-4; }.tag { @apply mb-2 mr-1.5 inline-block rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-600 dark:bg-white/10 dark:text-slate-300; }
+.filter { @apply rounded-full border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 transition hover:border-blue-300 hover:text-accent dark:border-white/10 dark:text-slate-300; }.filter-active { @apply border-accent bg-blue-50 text-accent dark:bg-blue-500/15; }
+.project-card { @apply overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-white/5; }.project-visual { @apply relative h-44 overflow-hidden p-5 text-xs font-semibold uppercase tracking-widest text-white; }.mini-window { @apply absolute bottom-0 right-7 h-28 w-48 rounded-t-xl bg-white/90 p-4 shadow-xl; }.mini-window b { @apply text-sm normal-case tracking-normal text-slate-700; }.mini-window div { @apply mt-2 h-1.5 rounded bg-slate-200; }.mini-window div:nth-child(2) { @apply w-3/4 bg-blue-300; }.mini-window div:nth-child(3) { @apply w-full; }.mini-window div:nth-child(4) { @apply w-1/2; }
+.certificate { @apply rounded-2xl border border-slate-100 bg-white p-6 dark:border-white/10 dark:bg-white/5; }.certificate h3 { @apply mt-2; }.certificate p:last-of-type { @apply mt-3 text-sm text-slate-500 dark:text-slate-400; }
+.resume-panel { @apply flex flex-col justify-between gap-8 rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 to-blue-50 p-8 dark:border-white/10 dark:from-white/10 dark:to-blue-900/10 md:flex-row md:items-end; }
+label { @apply grid gap-1.5 text-sm font-medium text-ink dark:text-white; } input, textarea { @apply w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-normal text-ink outline-none transition placeholder:text-slate-400 focus:border-accent focus:ring-2 focus:ring-blue-100 dark:border-white/10 dark:bg-slate-900 dark:text-white dark:focus:ring-blue-900; }
+@keyframes drift { 50% { transform: translate(22px, -18px) scale(1.05); } } @keyframes float { 50% { transform: translateY(-10px); } }
+@media (prefers-reduced-motion: reduce) { *,*:before,*:after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; } }
+@media print { header, footer, .button-primary, .button-secondary, form { display:none!important; } section { padding:20px 0!important; } }
